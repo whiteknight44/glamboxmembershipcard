@@ -3,10 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Silver Membership Offers</title>
+    <title>Gold Membership Offers</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        @keyframes goldShine {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .gold-header {
+            background: linear-gradient(135deg, #B8860B, #DAA520, #FFD700, #FFC125);
+            background-size: 400% 400%;
+            animation: goldShine 10s ease infinite;
+            color: white;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+        }
+        
+        .gold-card {
+            border: 2px solid #DAA520;
+            box-shadow: 0 4px 8px rgba(218, 165, 32, 0.3);
+            transition: transform 0.3s;
+        }
+        
+        .gold-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .gold-btn {
+            background-color: #DAA520;
+            border-color: #B8860B;
+        }
+        
+        .gold-btn:hover {
+            background-color: #B8860B;
+            border-color: #8B6914;
+        }
+        
+        .gold-accent {
+            color: #B8860B;
+        }
+        
+        .divider {
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #DAA520, transparent);
+            margin: 2rem auto;
+            width: 80%;
+        }
+        
+        .service-item {
+            border-left: 3px solid #DAA520;
+            padding-left: 15px;
+            margin-bottom: 15px;
+        }
+
+        .membership-terms {
+            background-color: #FFF8E1;
+            border-left: 4px solid #DAA520;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        .terms-title {
+            color: #B8860B;
+            font-weight: bold;
+        }
+    </style>
 </head>
-<body>
+<body class="bg-light">
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
@@ -17,53 +81,54 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    
-                   
                 </ul>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <header style="background-color: #003400; color: white;" class="text-center py-5">
+    <header class="gold-header text-center py-5">
         <div class="container">
-            <h1>Welcome Gold Members</h1>
-            <p class="lead">Enjoy your exclusive offers and discounts</p>
+            <h1 class="display-4 fw-bold">Welcome Gold Members</h1>
+            <p class="lead">Indulge in premium experiences with your exclusive Gold Membership</p>
+            <div class="mt-4">
+                <img src="img/goldcard.png" alt="Gold Membership Card" class="img-fluid" style="max-width: 300px;">
+            </div>
         </div>
     </header>
 
-    <!-- Offers Section -->
-    <section id="silver-offers" class="py-5">
+    <!-- Membership Overview -->
+    <section class="py-5 bg-white">
         <div class="container">
-            <h2 class="text-center mb-4">Exclusive Gold Member Offers</h2>
-            <div class="row">
-                <!-- Offer 1 -->
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="img/gold2.png" class="card-img-top" alt="Flat 15% Off">
-                        <div class="card-body">
-                            <h5 class="card-title">   Flat 20 % Off on All Services    </h5>
-                            <p class="card-text">      </p>
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="gold-accent">Gold Membership Benefits</h2>
+                    <p class="lead">For just ₹999/-, enjoy premium benefits and significant savings</p>
+                    <div class="divider"></div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-4 mb-4">
+                    <div class="card gold-card h-100">
+                        <div class="card-body text-center">
+                            <h3 class="card-title gold-accent">20% OFF</h3>
+                            <p class="card-text">Enjoy 20% off on all services</p>
                         </div>
                     </div>
                 </div>
-                <!-- Offer 2 -->
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="img/4.png" class="card-img-top" alt="Hair Keratin">
-                        <div class="card-body">
-                            <h5 class="card-title">Flat 30 % Off on Facials       </h5>
-                            <p class="card-text">       </p>
+                <div class="col-md-4 mb-4">
+                    <div class="card gold-card h-100">
+                        <div class="card-body text-center">
+                            <h3 class="card-title gold-accent">25% OFF</h3>
+                            <p class="card-text">Special 25% discount on all services every Tuesday and Thursday</p>
                         </div>
                     </div>
                 </div>
-                <!-- Offer 3 -->
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="img/6.png" class="card-img-top" alt="Hair Color">
-                        <div class="card-body">
-                            <h5 class="card-title">    Flat 30 % off on Party Makeup   </h5>
-                            <p class="card-text">   </p>
+                <div class="col-md-4 mb-4">
+                    <div class="card gold-card h-100">
+                        <div class="card-body text-center">
+                            <h3 class="card-title gold-accent">Extra 5% OFF</h3>
+                            <p class="card-text">Additional 5% discount on your birthday and anniversary</p>
                         </div>
                     </div>
                 </div>
@@ -71,9 +136,56 @@
         </div>
     </section>
 
+    <!-- Services Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center gold-accent mb-5">Premium Services Available</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="service-item">
+                        <h4>D-Tan Treatments</h4>
+                        <p>Professional D-Tan services for refreshed and glowing skin</p>
+                    </div>
+                    <div class="service-item">
+                        <h4>Facial Treatments</h4>
+                        <p>Luxury facial treatments customized for your skin type</p>
+                    </div>
+                    <div class="service-item">
+                        <h4>And More!</h4>
+                        <p>Enjoy discounts on all our other premium services</p>
+                    </div>
+                </div>
+                
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Terms & Conditions -->
+    <section class="py-5 bg-white">
+        <div class="container">
+            <h2 class="text-center gold-accent mb-4">Membership Terms</h2>
+            <div class="membership-terms">
+                <h5 class="terms-title">Important Information:</h5>
+                <ul class="mb-0">
+                    <li>Discount benefits cannot be clubbed with any other offer</li>
+                    <li>New card reissue costs ₹500 in case of loss</li>
+                    <li>Please bring your card to avail services</li>
+                    <li>Free service must be redeemed within two months of issuing the card</li>
+                </ul>
+            </div>
+            <div class="text-center mt-5">
+                <a href="#" class="btn btn-lg gold-btn text-white">Purchase Gold Membership Now</a>
+            </div>
+        </div>
+    </section>
+
+    
+
     <!-- Footer -->
     <footer class="bg-dark text-white text-center py-3">
-        <p>&copy; 2025 Salon Offers | <a href="#contact" class="text-white text-decoration-none">Contact Us</a></p>
+        <p>&copy; 2025 Glambox Salon | All Rights Reserved</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

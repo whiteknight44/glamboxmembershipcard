@@ -5,8 +5,102 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Silver Membership Offers</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        @keyframes silverShine {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .silver-header {
+            background: linear-gradient(135deg, #C0C0C0, #E8E8E8, #FFFFFF, #C0C0C0);
+            background-size: 400% 400%;
+            animation: silverShine 10s ease infinite;
+            color: #333;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+        }
+        
+        .silver-card {
+            border: 2px solid #C0C0C0;
+            box-shadow: 0 4px 8px rgba(192, 192, 192, 0.3);
+            transition: transform 0.3s;
+        }
+        
+        .silver-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .silver-btn {
+            background-color: #A9A9A9;
+            border-color: #808080;
+            color: white;
+        }
+        
+        .silver-btn:hover {
+            background-color: #808080;
+            border-color: #696969;
+            color: white;
+        }
+        
+        .silver-accent {
+            color: #696969;
+        }
+        
+        .divider {
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #A9A9A9, transparent);
+            margin: 2rem auto;
+            width: 80%;
+        }
+        
+        .service-item {
+            border-left: 3px solid #A9A9A9;
+            padding-left: 15px;
+            margin-bottom: 15px;
+        }
+
+        .membership-terms {
+            background-color: #F5F5F5;
+            border-left: 4px solid #A9A9A9;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        .terms-title {
+            color: #696969;
+            font-weight: bold;
+        }
+        
+        .service-package {
+            background-color: #F5F5F5;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: transform 0.3s;
+        }
+        
+        .service-package:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .college-section {
+            background-color: #EAEAEA;
+            border-radius: 10px;
+            padding: 30px;
+            margin: 40px 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        
+        .college-title {
+            color: #696969;
+            border-bottom: 2px solid #A9A9A9;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
-<body>
+<body class="bg-light">
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
@@ -17,52 +111,73 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    
                 </ul>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <header style="background-color: #003400; color: white;" class="text-center py-5">
+    <header class="silver-header text-center py-5">
         <div class="container">
-            <h1>Welcome Silver Members</h1>
-            <p class="lead">Enjoy your exclusive offers and discounts</p>
+            <h1 class="display-4 fw-bold">Welcome Silver Members</h1>
+            <p class="lead">Enjoy exclusive services and special discounts with your Silver Membership</p>
+            <div class="mt-4">
+                <img src="img/silvercard.png" alt="Silver Membership Card" class="img-fluid" style="max-width: 300px;">
+            </div>
         </div>
     </header>
 
-    <!-- Offers Section -->
-    <section id="silver-offers" class="py-5">
+    <!-- Membership Overview -->
+    <section class="py-5 bg-white">
         <div class="container">
-            <h2 class="text-center mb-4">Exclusive Silver Member Offers</h2>
-            <div class="row">
-                <!-- Offer 1 -->
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="img/1.jpg" class="card-img-top" alt="Flat 15% Off">
-                        <div class="card-body">
-                            <h5 class="card-title"> Flat 15% Off on All Services </h5>
-                            <p class="card-text"></p>
-                        </div>
-                    </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="silver-accent">Silver Membership Benefits</h2>
+                    <p class="lead">For just ₹499/-, enjoy premium benefits and great savings</p>
+                    <div class="divider"></div>
                 </div>
-                <!-- Offer 2 -->
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="img/2.jpg" class="card-img-top" alt="Hair Keratin">
+            </div>
+            
+            <div class="row mt-5">
+                <div class="col-lg-6 mx-auto">
+                    <div class="card silver-card mb-4">
                         <div class="card-body">
-                            <h5 class="card-title"> Flat 25% Off on Facials    </h5>
-                            <p class="card-text"></p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Offer 3 -->
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="img/3.jpg" class="card-img-top" alt="Hair Color">
-                        <div class="card-body">
-                            <h5 class="card-title"> Flat 25 % off on Party Makeup </h5>
-                            <p class="card-text"> </p>
+                            <h3 class="card-title text-center silver-accent mb-4">Choose Any Service For ₹999/- Only</h3>
+                            <p class="card-text text-center mb-4">Get discounted rates on a wide range of premium services</p>
+                            
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                    <i class="bi bi-check-circle-fill me-2 silver-accent"></i>
+                                    Facial + D-Tan/Bleach
+                                </li>
+                                <li class="list-group-item">
+                                    <i class="bi bi-check-circle-fill me-2 silver-accent"></i>
+                                    Manicure + Pedicure
+                                </li>
+                                <li class="list-group-item">
+                                    <i class="bi bi-check-circle-fill me-2 silver-accent"></i>
+                                    Hair Spa + Hair Cutting
+                                </li>
+                                <li class="list-group-item">
+                                    <i class="bi bi-check-circle-fill me-2 silver-accent"></i>
+                                    Nail Extensions
+                                </li>
+                                <li class="list-group-item">
+                                    <i class="bi bi-check-circle-fill me-2 silver-accent"></i>
+                                    Arms Wax + Half Legs
+                                </li>
+                                <li class="list-group-item">
+                                    <i class="bi bi-check-circle-fill me-2 silver-accent"></i>
+                                    Underarms + Face Wax
+                                </li>
+                                <li class="list-group-item">
+                                    <i class="bi bi-check-circle-fill me-2 silver-accent"></i>
+                                    Root Touchup + Hair Cutting
+                                </li>
+                            </ul>
+                            <div class="text-center mt-4">
+                                <p class="fw-bold">*Get thread-ups free with any service</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -70,9 +185,68 @@
         </div>
     </section>
 
+    <!-- College Student Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="college-section">
+                <h2 class="college-title text-center mb-4">SPECIAL OFFERS FOR COLLEGE GOING GIRLS</h2>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card silver-card h-100">
+                            <div class="card-body text-center">
+                                <h3 class="card-title silver-accent">25% OFF</h3>
+                                <p class="card-text">On all Beauty Services</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card silver-card h-100">
+                            <div class="card-body text-center">
+                                <h3 class="card-title silver-accent">20% OFF</h3>
+                                <p class="card-text">On all Hair Services</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card silver-card h-100">
+                            <div class="card-body text-center">
+                                <h3 class="card-title silver-accent">15% OFF</h3>
+                                <p class="card-text">On all Nail Services</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-4">
+                    <p class="lead">Just bring your college ID & enjoy your services!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Terms & Conditions -->
+    <section class="py-5 bg-white">
+        <div class="container">
+            <h2 class="text-center silver-accent mb-4">Membership Terms</h2>
+            <div class="membership-terms">
+                <h5 class="terms-title">Important Information:</h5>
+                <ul class="mb-0">
+                    <li>Silver Membership card costs only ₹499/-</li>
+                    <li>Discounts cannot be clubbed with any other offers</li>
+                    <li>Please bring your card to avail services</li>
+                    
+                </ul>
+            </div>
+            <div class="text-center mt-5">
+                <a href="#" class="btn btn-lg silver-btn">Purchase Silver Membership Now</a>
+            </div>
+        </div>
+    </section>
+
+    
+
     <!-- Footer -->
     <footer class="bg-dark text-white text-center py-3">
-        <p>&copy; 2025 Salon Offers | <a href="#contact" class="text-white text-decoration-none">Contact Us</a></p>
+        <p>&copy; 2025 Glambox Salon | <a href="#contact" class="text-white text-decoration-none">Contact Us</a></p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
